@@ -14,11 +14,15 @@ function Card() {
     setCompanySize(e.target.value)
   }
 
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    alert("Form Submitted Successfully!!!");
+  }
   return (
     <StyledCard>
 
       <StyledCardLogo src={header_icon} />
-      
+
       <h2 className='center'>It's delight to have you onboard</h2>
       <p className='center'>Help us know you better</p>
       <p >(This is how we optimize Wobot as per your business needs)</p>
@@ -46,7 +50,7 @@ function Card() {
           <StyledSizeOption companySize={companySize} onClick={companySizeChangeHandler} value="500+" >500+</StyledSizeOption>
 
       </div>
-        <StyledSubmitButton>
+        <StyledSubmitButton onClick={formSubmitHandler}>
           Get Started
         </StyledSubmitButton>
       </form>
